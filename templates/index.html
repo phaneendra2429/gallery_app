@@ -1,0 +1,41 @@
+<html>
+  <body>
+  <br><br><br>
+  <center>
+  <h1>  Our Flask application </h1>
+  <h3> Our Team </h3>
+  <table style="width:30%; border:1px solid black;" >
+  <tr>
+    <td>Samawat Chowdhury</td>
+    <td>Jenna Voutsinas</td>
+  </tr>
+  <tr>
+    <td>Venkata Sai Tej</td>
+    <td>Emmanuel Sowunmi</td>
+  </tr>
+  <tr>
+    <td>Juliana Unger</td>
+    <td>Phaneendra Ganji</td>
+  </tr>
+</table>
+	</center>
+	<br>
+   <form method="POST" enctype="multipart/form-data"> <center>
+   <input type="file" name="image">
+   <input type="submit" value="Upload" name="submit_button">
+   </form>
+ 
+  
+</br>
+<h1> Saved images in the Database</h1>
+{% for image_url,name in image_urls %}
+  <!-- <!-- <a href= "{{ image_url }}"">{{ image_url }}</a>  <br> -->
+  <a href="{{url_for('get_image_info',file_name=name)}}"><img src="{{ image_url }}" alt="image" width="300"></a>
+{% endfor %} -->
+
+{{table_html}}
+
+ <br><br><br>
+
+   </body>
+</html>

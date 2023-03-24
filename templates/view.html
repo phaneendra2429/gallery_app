@@ -1,0 +1,12 @@
+<html>
+  <body>
+  <br><br><br>
+  <center>
+  <h1> Saved images in the Database</h1>
+  {% for image_url in image_urls %}
+    <!-- <a href= "{{ image_url }}"">{{ image_url }}</a>  <br> -->
+    <li><img src="{{ image_url }}" alt="image" width="300"></li>
+  {% endfor %}
+ 
+   </body>
+</html>
