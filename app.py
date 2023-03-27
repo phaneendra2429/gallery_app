@@ -14,7 +14,6 @@ from google.cloud import datastore
 from markupsafe import Markup
 
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/phaneendraganji3/credentials.json'
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:/Users/phane/Downloads/gallery_app/credentials.json"
 
 storage_client = storage.Client()
@@ -160,5 +159,5 @@ def get_image_info(file_name):
 #     return 'Image properties: width={}, height={}, format={}, mode={}, info={}'.format(width, height, format, mode, info)
 
 if __name__ == '__main__':
-    server_port = os.environ.get('PORT', '8080')
-    app.run(debug=False, port=server_port, host='0.0.0.0')
+    server_port = int(os.environ.get('PORT', 8080))
+    app.run(debug=True, port=server_port, host='0.0.0.0')
