@@ -15,3 +15,6 @@ COPY . .
 
 # Run app.py when the container launches
 ENTRYPOINT ["python", "app.py"]
+
+#port
+EXPOSE 8080
