@@ -15,6 +15,7 @@ from markupsafe import Markup
 
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/phaneendraganji3/credentials.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:/Users/phane/Downloads/gallery_app/credentials.json"
 
 storage_client = storage.Client()
 source_bucket_name = 'proj2_phani'     
@@ -93,12 +94,12 @@ def upload():
 @app.route('/<path:file_name>')
 def get_image_info(file_name):
     blob = source_bucket.blob(file_name)
-    blob.download_to_filename('/home/phaneendraganji3/gallery_app/pictures/'+file_name)
+    blob.download_to_filename("C:/Users/phane/Downloads/gallery_app/pictures/"+file_name)
     
     # image_html="<h2>"+file_name+"</h2>"+ \
     #     '<image src="/pictures/1.jpeg" width="500" height="300">' 
 
-    image = Image.open(os.path.join("/home/phaneendraganji3/gallery_app/pictures/",file_name))
+    image = Image.open(os.path.join("C:/Users/phane/Downloads/gallery_app/pictures",file_name))
     # image_blob = source_bucket.blob(file_name)
     # url = image_blob.generate_signed_url(datetime.timedelta(minutes=15))
     # url_lst.append(url)
