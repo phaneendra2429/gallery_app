@@ -8,24 +8,24 @@ from PIL import Image
 from PIL.ExifTags import TAGS
 from google.cloud import storage
 import datetime
-import google.auth
+#import google.auth
 import os
-from google.cloud import datastore
+#from google.cloud import datastore
 from markupsafe import Markup
 
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:/Users/phane/Downloads/gallery_app/credentials.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "credentials.json"
 
 storage_client = storage.Client()
 source_bucket_name = 'proj2_phani'     
 source_bucket = storage_client.bucket(source_bucket_name)
 
 # Create a client object
-datastore_client = datastore.Client()
+#datastore_client = datastore.Client()
 # Define the entity kind
-kind = 'image_logs'
+#kind = 'image_logs'
 # Create a key object for the new entity
-key = datastore_client.key(kind)
+#key = datastore_client.key(kind)
 
 
 # pylint: disable=C0103
